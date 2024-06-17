@@ -1,3 +1,5 @@
+{% extends 'home/base.html' %}
+{% block content %}
 <h1>{{ question.question_text }}</h1>
 
 <ul>
@@ -7,3 +9,4 @@
 </ul>
 
 <a href="{% url 'quiz:detail' question.id %}">Vote again?</a>
+{% endblock %}
