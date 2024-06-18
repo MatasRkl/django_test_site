@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Person Detail{% endblock %}
+
+{% block content %}
+    <h1>{{ person.first_name }} {{ person.last_name }}</h1>
+    <p>Birthday: {{ person.birth_day }}</p>
+    <a href="{% url 'examination:delete_person' person.id %}" class="btn btn-danger">Delete Person</a>
+    <a href="{% url 'examination:persons' %}" class="btn btn-secondary">Back to Persons List</a>
+{% endblock %}
